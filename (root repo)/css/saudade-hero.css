@@ -1,0 +1,233 @@
+/* Judul */
+.photo-hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #01161e;
+  color: #fff;
+}
+.photo-hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Slider */
+.photo-slider {
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+}
+.slider-track {
+  display: flex;
+  width: calc(250px * 8); /* jumlah foto * ukuran */
+  animation: scroll 25s linear infinite;
+}
+.slider-track img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 8px;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Deskripsi */
+.photo-description {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Section Video */
+.video-projects {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.video-projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Grid video */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.video-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.video-box:hover {
+  transform: translateY(-5px);
+}
+
+.video-box img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-box h4 {
+  margin: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Popup */
+.video-popup {
+  display: none; /* awalnya hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-popup-content {
+  position: relative;
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.video-popup video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.video-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+.lightbox-controls {
+  margin-top: 15px;
+}
+.lightbox-controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lightbox-controls button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .photo-hero h1 {
+    font-size: 2rem;
+  }
+  .slider-track img {
+    width: 180px;
+    height: 120px;
+  }
+}
+
+.photo-hero {
+  padding: 40px 20px;
+  background: #01161e;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.photo-hero h1 {
+  font-size: 2.5rem;
+  margin: 20px 0 0 0; /* beri jarak supaya tidak nempel tombol */
+}
+
+/* tombol back */
+.btn-back {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #0db6fc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.btn-back:hover {
+  background: #098ac0;
+}
+
+/* responsif */
+@media (max-width: 768px) {
+  .photo-hero h1 {
+    font-size: 2rem;
+  }
+  .btn-back {
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

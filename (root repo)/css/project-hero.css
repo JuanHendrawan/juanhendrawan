@@ -1,0 +1,135 @@
+/* Layout utama */
+.project-section {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar filter */
+.filter {
+  width: 240px;
+  padding: 20px;
+  background: #124559;
+  color: #eff6e0;
+  border-radius: 10px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.filter h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.filter select,
+.filter button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.filter button {
+  background: #598392;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter button:hover {
+  background: #0db6fc;
+}
+
+/* Grid project */
+.project-list {
+  flex: 1;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px; /* atur jarak baris & kolom sekaligus */
+  column-gap: 15px; /* jarak antar box kiri–kanan */
+  row-gap: 10px; /* jarak antar baris atas–bawah */
+  padding: 5px;
+  justify-items: start;
+  align-items: start;
+}
+.project-list {
+  text-decoration: none;
+}
+/* Project card */
+.project-card {
+  width: 100%; /* otomatis ikuti kolom grid */
+  max-width: 250px; /* biar tidak terlalu lebar */
+  height: 260px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img,
+.project-card video {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.project-card h4 {
+  padding: 10px;
+  font-size: 1rem;
+  color: #01161e;
+}
+
+/* Responsif mobile */
+@media (max-width: 900px) {
+  .project-section {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filter select,
+  .filter button {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .project-list {
+    justify-items: center;
+  }
+}
+/* TOMBOL BACK TO TOP */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #01161e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 12px 13px;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#backToTop:hover {
+  background-color: #0056b3;
+}

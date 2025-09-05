@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/image/camera.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="/(root repo)/css/footer.css" />
+    <link rel="stylesheet" href="/(root repo)/css/about-hero.css" />
+    <link rel="stylesheet" href="/(root repo)/css/navigation.css" />
+    <link rel="stylesheet" href="/(root repo)/css/umum.css" />
+    <link rel="stylesheet" href="/(root repo)/css/totop.css" />
+    <title>About ME | Juan Hendrawan</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/index.html" class="logo">Juan Hendrawan</a>
+
+      <!-- Tombol menu (hanya tampil di mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+      <!-- Navigasi -->
+      <nav class="nav" id="nav">
+        <!-- Tombol close (hanya di mobile saat popup terbuka) -->
+        <button class="menu-close" id="menuClose" aria-label="Tutup menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/project.html">Projects</a></li>
+          <li><a href="#" id="contactBtn">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Popup Contact -->
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Contact Me</h2>
+          <form onsubmit="return checkHoneypot()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- Honeypot (hidden) -->
+            <input type="text" id="honeypot" name="honeypot" style="display: none" />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <!-- Popup Contact -->
+    </header>
+    <main>
+      <!-- Tombol Back to Top -->
+      <button id="backToTop" aria-label="Back to top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+      </button>
+      <!-- HERO -->
+      <section class="about" id="about">
+        <div class="about-container">
+          <!-- Foto -->
+          <div class="about-photo">
+            <img src="/(root repo)/assets/images/Profile.webp" alt="Foto Juan Hendrawan" />
+          </div>
+
+          <!-- Konten -->
+          <div class="about-content">
+            <h2>✨ Nice To Meet You</h2>
+            <p>
+              Halo! 👋 Saya <strong>Juan Hendrawan</strong>, seorang fotografer dan videografer yang berfokus pada <em>visual storytelling</em>. Sejak awal, saya percaya bahwa setiap momen punya cerita, dan tugas saya adalah menangkap serta
+              mengubahnya menjadi karya yang bisa dirasakan orang lain.
+            </p>
+            <p>
+              Berawal dari ketertarikan saya pada dunia visual, saya mulai mendalami fotografi dan videografi secara mandiri. Dari memotret momen sehari-hari hingga project kreatif, saya terbiasa menghadapi berbagai situasi produksi — mulai
+              dari perencanaan konsep, pengambilan gambar, hingga editing untuk menghasilkan karya visual yang utuh dan bermakna.
+            </p>
+
+            <h3>💡 Bidang yang saya tekuni:</h3>
+            <ul class="about-list">
+              <li>📷 Fotografi (event, produk, dokumentasi)</li>
+              <li>🎥 Videografi (shooting, cinematic visual, b-roll)</li>
+              <li>🎨 Editing & post-production</li>
+            </ul>
+
+            <p>Selama perjalanan ini, saya belajar tentang pentingnya detail, storytelling, dan bagaimana visual bisa jadi media komunikasi yang kuat antara brand dan audiens.</p>
+            <p>📌 Visi saya adalah terus berkarya melalui lensa, membantu orang maupun brand menyampaikan pesan mereka dengan cara yang kreatif, menarik, dan penuh makna.</p>
+
+            <div class="about-cta">
+              <a href="/index.html" class="btn-primary">📩 Hubungi Saya</a>
+              <a href="https://instagram.com" class="btn-secondary" target="_blank">🌐 Ikuti Saya</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo / Identitas -->
+          <div class="footer-logo">
+            <h3>Juan Hendrawan</h3>
+            <p>Photographer & Videographer</p>
+          </div>
+
+          <!-- Navigasi cepat -->
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Me</a>
+            <a href="/project.html">Projects</a>
+          </div>
+
+          <!-- Media Sosial -->
+          <div class="footer-socials">
+            <h4>Social Media</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/juanhendrawan/" target="_blank" aria-label="Instagram">📷 Instagram</a>
+              <a href="https://www.linkedin.com/in/juanhendrawan/" target="_blank" aria-label="LinkedIn">💼 LinkedIn</a>
+              <a href="https://github.com/JuanHendrawan" target="_blank" aria-label="GitHub">💻 GitHub</a>
+              <a href="https://youtube.com/@byjuanhendrawan?si=ejxFoOhoU7oYkqHJ" target="_blank" aria-label="YouTube">🎥 YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Juan Hendrawan. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+    <script src="/(root repo)/js/about.js"></script>
+    <script src="/(root repo)/js/keatas.js"></script>
+    <script src="/(root repo)/js/navigasi.js"></script>
+  </body>
+</html>

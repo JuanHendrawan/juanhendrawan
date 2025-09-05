@@ -1,0 +1,175 @@
+/* NAVIGATION (HEADER + MENU) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #01161e;
+}
+
+.logo {
+  color: #eff6e0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Tombol menu mobile */
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: #eff6e0;
+  cursor: pointer;
+}
+
+/* Tombol Contact */
+#contactBtn {
+  color: #0db6fc;
+  font-weight: bold;
+  border: #124559 2px solid;
+  background-color: #124559;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#contactBtn:hover {
+  color: #0db6fc;
+  border: #124559 2px solid;
+  background-color: #598392;
+  text-decoration: underline;
+}
+
+/* Navigasi */
+.nav {
+  display: none; /* default tertutup di mobile */
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #01161e;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  width: max-content;
+  min-width: 160px;
+  z-index: 9999;
+}
+
+.nav.open {
+  display: block;
+}
+
+.menu-close {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #eff6e0;
+  cursor: pointer;
+  padding: 4px 8px 0 8px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 10px 16px;
+  color: #eff6e0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-list li a:hover {
+  background: #444;
+}
+
+/* Desktop & tablet */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* ikon hilang */
+  }
+  .nav {
+    position: static;
+    display: block; /* selalu tampil */
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+  .menu-close {
+    display: none;
+  }
+  .nav-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .nav-list li a {
+    padding: 6px 0;
+  }
+  .nav-list li a:hover {
+    background: transparent;
+    color: #0db6fc;
+  }
+}
+
+/* Popup Contact */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: #01161e;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.popup input,
+.popup textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.popup button {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  border: none;
+  color: #01161e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup button:hover {
+  background: #45a049;
+}

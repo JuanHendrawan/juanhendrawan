@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/(root repo)/css/umum.css" />
+    <link rel="stylesheet" href="/(root repo)/css/totop.css" />
+    <link rel="stylesheet" href="/(root repo)/css/footer.css" />
+    <link rel="stylesheet" href="/(root repo)/css/navigation.css" />
+    <link rel="stylesheet" href="/(root repo)/css/saudade.css" />
+    <link rel="stylesheet" href="/(root repo)/css/saudade-hero.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/index.html" class="logo">Juan Hendrawan</a>
+
+      <!-- Tombol menu (hanya tampil di mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+      <!-- Navigasi -->
+      <nav class="nav" id="nav">
+        <!-- Tombol close (hanya di mobile saat popup terbuka) -->
+        <button class="menu-close" id="menuClose" aria-label="Tutup menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/project.html">Projects</a></li>
+          <li><a href="#" id="contactBtn">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Popup Contact -->
+      <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Contact Me</h2>
+          <form action="https://formspree.io/f/xzzaaypq" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- Honeypot (anti-bot) -->
+            <input type="text" id="honeypot" name="honeypot" style="display: none" />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Tombol Back to Top -->
+      <button id="backToTop" aria-label="Back to top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+      </button>
+      <!-- Judul -->
+      <section class="photo-hero">
+        <a href="/(root repo)/project.html" class="btn-back">← Back to Projects</a>
+        <h1>Bayu Buana Travel Servies – 7D EXOTIC JAVA + BALI</h1>
+      </section>
+
+      <!-- Slider otomatis -->
+      <section class="photo-slider">
+        <div class="slider-track">
+          <img src="/(root repo)/assets/images/Bayu Buana Travel Servies/Bayu Buana Travel Servies (1).webp" alt="Street 1" />
+          <img src="/(root repo)/assets/images/Bayu Buana Travel Servies/Bayu Buana Travel Servies (2).webp" alt="Street 2" />
+          <img src="/(root repo)/assets/images/Bayu Buana Travel Servies/Bayu Buana Travel Servies (3).webp" alt="Street 3" />
+          <img src="/(root repo)/assets/images/Bayu Buana Travel Servies/Bayu Buana Travel Servies (4).webp" alt="Street 4" />
+          <!-- duplikasi untuk loop halus -->
+          <img src="/image/street1.jpg" alt="Street 1" />
+          <img src="/image/street2.jpg" alt="Street 2" />
+          <img src="/image/street3.jpg" alt="Street 3" />
+          <img src="/image/street4.jpg" alt="Street 4" />
+        </div>
+      </section>
+
+      <!-- Deskripsi -->
+      <section class="photo-description">
+        <p>Project ini mengeksplorasi kehidupan jalanan melalui lensa kamera. Setiap foto menangkap momen spontan, interaksi manusia, serta detail unik yang sering terlewatkan.</p>
+      </section>
+
+      <section class="video-projects">
+        <h2>🎬 Video Projects</h2>
+        <div class="video-grid" id="videoGrid">
+          <!-- JS akan inject thumbnail video di sini -->
+        </div>
+      </section>
+
+      <!-- Popup untuk play video -->
+      <div class="video-popup" id="videoPopup">
+        <div class="video-popup-content">
+          <span class="video-close" id="videoClose">&times;</span>
+          <video id="popupVideo" controls>
+            <source src="" type="video/mp4" />
+            Browser Anda tidak mendukung video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Lightbox Preview -->
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" alt="" />
+        <div class="lightbox-controls">
+          <button id="prevBtn">&#10094;</button>
+          <button id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo / Identitas -->
+        <div class="footer-logo">
+          <h3>Juan Hendrawan</h3>
+          <p>Photographer & Videographer</p>
+        </div>
+
+        <!-- Navigasi cepat -->
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Me</a>
+          <a href="/project.html">Projects</a>
+        </div>
+
+        <!-- Media Sosial -->
+        <div class="footer-socials">
+          <h4>Social Media</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/juanhendrawan/" target="_blank" aria-label="Instagram">📷 Instagram</a>
+            <a href="https://www.linkedin.com/in/juanhendrawan/" target="_blank" aria-label="LinkedIn">💼 LinkedIn</a>
+            <a href="https://github.com/JuanHendrawan" target="_blank" aria-label="GitHub">💻 GitHub</a>
+            <a href="https://youtube.com/@byjuanhendrawan?si=ejxFoOhoU7oYkqHJ" target="_blank" aria-label="YouTube">🎥 YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Juan Hendrawan. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="/(root repo)/js/keatas.js"></script>
+    <script src="/(root repo)/js/navigasi.js"></script>
+    <script src="/(root repo)/js/saudade.js"></script>
+  </body>
+</html>

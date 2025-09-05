@@ -1,0 +1,72 @@
+/* CTA Section */
+.cta {
+  width: 100%;
+  background: #598392;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 35px;
+  color: #f0f0f0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons a {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Primary button */
+.btn-primary {
+  background: #fff;
+  color: #007bff;
+}
+
+.btn-primary:hover {
+  background: #eaeaea;
+}
+
+/* Secondary button */
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #007bff;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .cta {
+    padding: 60px 15px;
+  }
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+}
